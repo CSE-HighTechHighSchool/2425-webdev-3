@@ -1,32 +1,85 @@
 /* Variables */
+
 :root {
-    --background-color-1: ;
-    --background-color-2: ;
+    --background-color-1: lightblue;
+    --background-color-2: rgb(90, 173, 201);
 
     --font-color-dark: ;
-    --font-color-light: #ffffff;
+    --font-color-light: white;
     --button-background-color: ;
     --button-text-color: ;
     --button-hover-color: ;
+    --navbar-bg-color: #000080;
+    --navbar-font-color: gray;
+    --footer-color: darkblue;
 
     --main-font-type: ;
+    --title-font-type: 'Concert One';
     --navbar-font-type: ;
+    --footer-font-type: ;
     --button-font-type: ;
 }
 
+/* Class CSS */
+
 .nb-background-color {
     /* navbar background color */
-    --navbar-color: #000080;
-    background-color: var(--navbar-color);
+    background-color: var(--navbar-bg-color);
 }
 
-.nb-font-type {
+.nb-font {
     /* navbar font family */
-    --navbar-font-type: Roboto;
     font-family: var(--navbar-font-type);
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+
 }
 
 .body-background-color {
     /* body background color */
     background-color: var(--background-color-1);
+}
+
+.organization-info {
+    /* organization info section background color and font */
+    color: var(--font-color-light);
+    background-color: var(--background-color-2);
+}
+
+.title-space {
+    /* title space background color and font */
+    color: var(--font-color-light);
+    background-color: var(--background-color-1);
+    font-family: var(--title-font-type);
+}
+
+.footer {
+    background-color: var(--footer-color);
+    color: var(--font-color-light);
+}
+
+/* Underline Animation CSS */
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: var(--navbar-font-color);
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #eae6e6;
+    /*transform-origin: bottom right;*/
+    transition: transform 0.35s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    /*transform-origin: bottom left;*/
 }
