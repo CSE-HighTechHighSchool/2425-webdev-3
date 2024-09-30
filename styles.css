@@ -4,14 +4,29 @@
     --background-color-2: ;
 
     --font-color-dark: ;
-    --font-color-light: ;
+    --font-color-light: #ffffff;
     --button-background-color: ;
     --button-text-color: ;
     --button-hover-color: ;
-    --navbar-color: ;
-    --footer-color: ;
 
     --main-font-type: ;
     --navbar-font-type: ;
     --button-font-type: ;
+}
+
+.nb-background-color {
+    /* navbar background color */
+    --navbar-color: #000080;
+    background-color: var(--navbar-color);
+}
+
+.nb-font-type {
+    /* navbar font family */
+    --navbar-font-type: Roboto;
+    font-family: var(--navbar-font-type);
+}
+
+.body-background-color {
+    /* body background color */
+    background-color: var(--background-color-1);
 }
