@@ -10,7 +10,7 @@
     --button-text-color: ;
     --button-hover-color: ;
     --navbar-bg-color: #000080;
-    --navbar-font-color: gray;
+    --navbar-font-color: white;
     --footer-color: darkblue;
 
     --main-font-type: ;
@@ -20,7 +20,14 @@
     --button-font-type: ;
 }
 
+
 /* Class CSS */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 .nb-background-color {
     /* navbar background color */
@@ -34,6 +41,7 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+
 
 .body-background-color {
     /* body background color */
@@ -58,7 +66,55 @@
     color: var(--font-color-light);
 }
 
+.content-container {
+    margin-inline: auto;
+}
+
+.vertical-scroll-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    gap: 6rem 0;
+    min-width: 400px;
+    overflow-y: scroll;
+    scrollbar-color: #3848a0 #1b2767;
+    scroll-snap-type: y mandatory;
+    padding: 200px 20px;
+    height: 400px;
+}
+
+.vertical-scroll-container img {
+    scroll-snap-align: center;
+    width: 400px;
+
+    animation: slideInOut;
+    animation-timeline: view();
+}
+
+
+/* Keyframes */
+@keyframes slideInOut {
+    entry 0% {
+      transform: scale(.8) translateY(100px); 
+      opacity: 0;
+    }
+    entry 100% { 
+      transform: scale(1) translateY(0); 
+      opacity: 1;
+    }
+    exit 0% {
+      transform: scale(1) translateY(0); 
+      opacity: 1;    
+    }
+    exit 100% { 
+      transform: scale(.8) translateY(-100px); 
+      opacity: 0 
+    }
+  }
+
 /* Underline Animation CSS */
+
 .hover-underline-animation {
     display: inline-block;
     position: relative;
