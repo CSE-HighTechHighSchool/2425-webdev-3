@@ -271,6 +271,12 @@
     font-size: 30px;
 }
 
+.problems .owl-theme.custom-carousel .owl-nav [class*='owl-']:hover {
+    background: #59abe2;
+    color: #1a279b;
+    text-decoration: none; 
+}
+
 
 
 
