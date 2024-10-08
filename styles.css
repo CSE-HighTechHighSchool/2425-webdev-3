@@ -163,6 +163,14 @@
   top: 2px;
 }
 
+.location {
+  background-color: var(--color-4);
+}
+
+.reviews{
+  background-color: var(--color-4);
+}
+
 .line-title {
   position: relative;
   width: 400px;
