@@ -302,10 +302,11 @@
 }
 
 /* Underline Animation CSS */
-
 .hover-underline-animation {
   display: inline-block;
   position: relative;
+  color: #aab5be; 
+  transition: color 0.3s ease; 
 }
 
 .hover-underline-animation:after {
@@ -316,14 +317,16 @@
   height: 2px;
   left: 0;
   bottom: 0;
-  background-color: #eae6e6;
-  /*transform-origin: bottom right;*/
+  background-color: #eae6e6; 
   transition: transform 0.35s ease-out;
+}
+
+.hover-underline-animation:hover {
+  color: #eae6e6; 
 }
 
 .hover-underline-animation:hover:after {
   transform: scaleX(1);
-  /*transform-origin: bottom left;*/
 }
 
 /* Responsive CSS */
@@ -433,3 +436,6 @@
   visibility: visible;
 }
 
+.authors{
+  background-color: var(--wave-color)
+}
