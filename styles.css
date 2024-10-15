@@ -437,5 +437,9 @@
 }
 
 .authors{
+  background-color: var(--wave-color);
+}
+
+.sessions{
   background-color: var(--wave-color)
 }
