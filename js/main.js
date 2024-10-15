@@ -1,6 +1,4 @@
 function makeActive(event) {
-  var previous = document.getElementsByClassName(" active");
-
   var clickable = event.target;
 
   if (!clickable.className.includes('clickable')) {

@@ -208,7 +208,7 @@
 
 .problems .item {
   margin: 0 15px 60px;
-  width: 20vw;
+  width: 300px;
   height: 400px;
   display: flex;
   display: -webkit-flex;
@@ -223,8 +223,8 @@
   cursor: pointer;
 }
 .problems .item.active {
-  width: 25vw;
-  height: 500px;
+  width: 100%;
+  height: 400px;
   box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
 }
@@ -232,7 +232,7 @@
   content: "";
   display: block;
   position: absolute;
-  height: 100%;
+  height: 400px;
   width: 100%;
   left: 0;
   top: 0;
@@ -266,16 +266,20 @@
   transform: translateY(0);
 }
 
-.item img {
+.animals .item img.animal {
   cursor: pointer;
 }
 
-.item .item-desc {
+.animals .item .item-desc {
   opacity: 0;
 }
-
-.item.active .item-desc {
+.animals .item.active .item-desc {
   opacity: 1;
+}
+
+.animals .item.active .item-desc .bubble{
+  background-image: url(img/bubble.png);
+  background-size: cover;
 }
 
 /* Keyframes */
@@ -363,15 +367,21 @@
 }
 
 .iceberg {
-  background-image: url('your-image.jpg');
-  background-size: cover; /* This ensures the image covers the entire area */
-  background-position: center; 
-  height: 100vh; 
+  max-height: 90vh;
   display: flex;
   color: white; 
   position: relative;
-  top:-155px;
+  top:-95px;
   margin: 50px auto;
+  overflow: hidden;
+}
+
+.iceberg-img {
+    height: 70vh;
+    display: flex;
+    color: white; 
+    position: relative;
+    margin: 50px auto;
 }
 
 .waves {
