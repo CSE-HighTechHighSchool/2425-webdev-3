@@ -471,14 +471,10 @@
   visibility: visible;
 }
 
-<<<<<<< Updated upstream
 .authors{
   background-color: var(--wave-color);
 }
 
 .sessions{
-=======
-.authors {
->>>>>>> Stashed changes
   background-color: var(--wave-color)
 }
