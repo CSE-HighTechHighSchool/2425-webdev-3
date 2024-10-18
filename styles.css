@@ -298,13 +298,20 @@
   -webkit-transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
-.animals .item.active .item-desc .bubble p{
+
+.animals .item.active .item-desc .bubble p {
   position: relative;
   width: 50%;
   padding: 10px;
   top: 80px;
   left: 70px;
-  }
+}
+
+.map {
+  width: 600px; 
+  min-width: 300px;
+  height: 450px;
+}
 
 /* Keyframes */
 @keyframes slideInOut {
@@ -471,10 +478,10 @@
   visibility: visible;
 }
 
-.authors{
+.authors {
   background-color: var(--wave-color);
 }
 
-.sessions{
+.sessions {
   background-color: var(--wave-color)
 }
