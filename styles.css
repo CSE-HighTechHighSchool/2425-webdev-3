@@ -11,8 +11,9 @@
   --color-8: #023E8A;
   --color-9: #03045E;
 
-  --button-background-color: var(--color-7);
-  --button-hover-color: var(--color-9);
+  --button-background-color: var(--color-4);
+  --button-hover-color-1: var(--color-5);
+  --button-hover-color-2: var(--color-5);
   --navbar-bg-color: var(--color-9);
   --footer-color: var(--color-9);
   --wave-color: var(--color-4);
@@ -46,28 +47,12 @@
   background-color: var(--color-1);
 }
 
-.organization-info {
-  /* organization info section background color and font */
-  background-color: var(--color-2);
-}
-
-.title-space {
-  /* title space background color and font */
-  background-color: var(--color-1);
-  font-family: var(--title-font-type);
-
-}
-
 .footer {
   background-color: var(--footer-color);
 }
 
 .icon-white {
   color: white;
-}
-
-.title-space {
-  height: 500px;
 }
 
 .ocean {
@@ -96,17 +81,29 @@
   animation-timeline: view();
 }
 
-.small-img {
-  width: 400px;
-  height: auto;
+.quote {
+  padding: 10px 50px;
+}
+
+/* Sections CSS */
+.title-space {
+  height: 500px;
+}
+
+.location {
+  background-color: var(--color-4);
+}
+
+.reviews {
+  background-color: var(--color-4);
+}
+
+.organization-info {
+  background-color: var(--color-2);
 }
 
 .expert-quotes {
   background-color: var(--color-2);
-}
-
-.quote {
-  padding: 10px 50px;
 }
 
 /* Donate Button Code */
@@ -141,8 +138,8 @@
   left: 0;
   z-index: -1;
   border-radius: 5px;
-  background-color: var(--button-hover-color);
-  background-image: linear-gradient(315deg, var(--button-hover-color) 0%, darkblue 74%);
+  background-color: var(--button-hover-color-2);
+  background-image: linear-gradient(315deg, var(--button-hover-color-1) 0%, var(--button-hover-color-2) 74%);
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
     7px 7px 20px 0px rgba(0, 0, 0, .1),
     4px 4px 5px 0px rgba(0, 0, 0, .1);
@@ -157,14 +154,6 @@
 
 .donate-btn:active {
   top: 2px;
-}
-
-.location {
-  background-color: var(--color-4);
-}
-
-.reviews {
-  background-color: var(--color-4);
 }
 
 /* Problems (Cards) CSS */
