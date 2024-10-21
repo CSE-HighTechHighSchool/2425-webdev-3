@@ -1,4 +1,4 @@
-/* Variables */
+/* ----------- Variables ----------- */
 
 :root {
   --color-1: #CAF0F8;
@@ -25,13 +25,7 @@
 }
 
 
-/* Class CSS */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+/* ----------- Class CSS ----------- */
 
 .nb-background-color {
   /* navbar background color */
@@ -114,6 +108,8 @@
 .quote {
   padding: 10px 50px;
 }
+
+/* Donate Button Code */
 
 .donate-btn {
   width: 130px;
@@ -202,6 +198,8 @@
   background: #e73700;
 }
 
+/* Problems (Cards) CSS */
+
 .problems {
   padding: 60px 50px;
 }
@@ -224,7 +222,7 @@
 }
 
 .problems .item.active {
-  width: 100%;
+  width: 90%;
   height: 400px;
   box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
@@ -272,6 +270,8 @@
   transform: translateY(0);
 }
 
+/* Animals (Bubble) CSS */
+
 .animals .item {
   height: 700px;
 }
@@ -280,40 +280,38 @@
   cursor: pointer;
 }
 
-.animals .item .item-desc {
-  opacity: 0;
-}
-
-.animals .item.active .item-desc {
-  opacity: 1;
-}
-
-.animals .item.active .item-desc .bubble {
+.animals .item .item-desc .bubble {
   background-image: url(img/bubble.webp);
   background-position: center;
   background-size: cover;
   width: 300px;
   height: 300px;
-  transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
+  opacity: 0;
+  animation: fadeOut 1s;
+}
+
+.animals .item.active .item-desc .bubble {
+  opacity: 1;
+  animation: fadeIn 1s;
   cursor: pointer;
 }
 
-.animals .item.active .item-desc .bubble p {
+.animals .item .item-desc .bubble p {
   position: relative;
   width: 50%;
   padding: 10px;
-  top: 80px;
+  top: 95px;
   left: 70px;
 }
 
 .map {
-  width: 600px; 
+  width: 600px;
   min-width: 300px;
   height: 450px;
 }
 
-/* Keyframes */
+/* ----------- Keyframes ----------- */
+
 @keyframes slideInOut {
   entry 0% {
     transform: scale(.8) translateY(100px);
@@ -333,6 +331,26 @@
   exit 100% {
     transform: scale(.8) translateY(-100px);
     opacity: 0
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 
@@ -364,7 +382,7 @@
   transform: scaleX(1);
 }
 
-/* Responsive CSS */
+/* ----------- Responsive CSS ----------- */
 
 
 /* ----------- Waves ------------*/
