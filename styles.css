@@ -485,3 +485,11 @@
 .sessions {
   background-color: var(--wave-color)
 }
+
+.footer-img {
+  transition: transform 1s ease;
+}
+
+.footer-img:hover {
+  transform: rotate(180deg);
+}
