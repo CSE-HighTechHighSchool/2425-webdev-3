@@ -239,7 +239,7 @@
 }
 
 .animals .item .item-desc .bubble {
-  background-image: url(img/bubble.webp);
+  background-image: url(img/bubble.png);
   background-position: center;
   background-size: cover;
   width: 300px;
