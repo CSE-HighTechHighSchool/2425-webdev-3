@@ -7,42 +7,50 @@
   --color-4: #48CAE4;
   --color-5: #00B4D8;
   --color-6: #0096C7;
-  --color-7: #0077B6;
+  --color-7: #006297;
   --color-8: #023E8A;
   --color-9: #03045E;
+  --color-10: #4b95c0;
 
   --button-background-color: var(--color-4);
   --button-hover-color-1: var(--color-5);
   --button-hover-color-2: var(--color-5);
-  --navbar-bg-color: var(--color-9);
-  --footer-color: var(--color-9);
+  --navbar-bg-color: var(--color-10);
+  --footer-color: var(--color-10);
   --wave-color: var(--color-4);
 
   --main-font-type: ;
   --title-font-type: 'Concert One';
-  --navbar-font-type: ;
+  --navbar-font-type: 'REM';
   --footer-font-type: ;
   --button-font-type: 'Concert One';
+  --animal-font-type: 'DynaPuff';
 }
 
 
 /* ----------- Class CSS ----------- */
 
-.logo{
+.logo {
   height: 50px;
   width: 50px;
 }
+
 .nb-background-color {
   /* navbar background color */
   background-color: var(--navbar-bg-color);
 }
 
-.nb-font {  
+.nb-font {
   /* navbar font family */
   font-family: var(--navbar-font-type);
   font-size: 20px;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.nb-title-font {
+  font-family: var(--navbar-font-type);
+  font-size: 25px;
 }
 
 
@@ -53,6 +61,10 @@
 
 .footer {
   background-color: var(--footer-color);
+}
+
+.lb-footer {
+  background-color: var(--color-9);
 }
 
 .icon-white {
@@ -93,6 +105,7 @@
 .title-space {
   height: 500px;
   font-family: var(--title-font-type);
+  color: var(--color-7);
 }
 
 .location {
@@ -109,6 +122,11 @@
 
 .expert-quotes {
   background-color: var(--color-2);
+}
+
+.animal-font {
+  color: white;
+  font-family: var(--animal-font-type);
 }
 
 /* Donate Button Code */
@@ -267,6 +285,16 @@
   left: 70px;
 }
 
+.animals::after .item h1 {
+  opacity: 0;
+  animation: fadeOut 1s;
+}
+
+.animals:hover .item h1 {
+  opacity: 1;
+  animation: fadeIn 1s;
+}
+
 .map {
   width: 600px;
   min-width: 300px;
@@ -321,7 +349,7 @@
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  color: #aab5be;
+  color: #dddddd;
   transition: color 0.3s ease;
 }
 
@@ -333,12 +361,12 @@
   height: 2px;
   left: 0;
   bottom: 0;
-  background-color: #eae6e6;
+  background-color: #ffffff;
   transition: transform 0.35s ease-out;
 }
 
 .hover-underline-animation:hover {
-  color: #eae6e6;
+  color: #ffffff;
 }
 
 .hover-underline-animation:hover:after {
