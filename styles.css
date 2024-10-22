@@ -28,12 +28,16 @@
 
 /* ----------- Class CSS ----------- */
 
+.logo{
+  height: 50px;
+  width: 50px;
+}
 .nb-background-color {
   /* navbar background color */
   background-color: var(--navbar-bg-color);
 }
 
-.nb-font {
+.nb-font {  
   /* navbar font family */
   font-family: var(--navbar-font-type);
   font-size: 20px;
