@@ -14,14 +14,5 @@ function makeActive(event) {
   } else {
     clickable.className = clickable.className += " active";
   }
-  /*
-if (event.target.className.includes('clickable')) {
-  event.target.className += " active";
-} else if (event.target.parentElement.className.includes('clickable')) {
-  event.target.parentElement.className += " active";
-} else if (event.target.parentElement.parentElement.className.includes('clickable')) {
-  event.target.parentElement.parentElement.className += " active";
-}
-  */
 }
 
