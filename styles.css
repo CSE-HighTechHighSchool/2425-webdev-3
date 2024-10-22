@@ -88,6 +88,7 @@
 /* Sections CSS */
 .title-space {
   height: 500px;
+  font-family: var(--title-font-type);
 }
 
 .location {
