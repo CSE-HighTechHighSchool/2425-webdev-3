@@ -68,7 +68,7 @@
 }
 
 .icon-white {
-  color: white;
+  color: white; 
 }
 
 .ocean {
@@ -501,4 +501,15 @@
 
 .footer-img:hover {
   transform: rotate(180deg);
+}
+
+.alto-img {
+  height: 400px; 
+  width: auto; 
+}
+
+.authors-box{
+  background-color: var(--footer-color);
+  border-radius: 150px;
+  border: 10px solid #3479a0; 
 }
