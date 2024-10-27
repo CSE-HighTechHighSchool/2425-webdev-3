@@ -487,10 +487,18 @@
 
 .footer-img {
   transition: transform 1s ease;
+  padding-bottom:20px;
 }
 
 .footer-img:hover {
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateY(30px);
+}
+
+.footer .col-md-4:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+.footer .col-md-4 {
+  padding-right: 15px;
 }
 
 .alto-img {
@@ -502,4 +510,18 @@
   background-color: var(--footer-color);
   border-radius: 150px;
   border: 10px solid #3479a0; 
+  padding-left:50px;
+  padding-top:20px;
+}
+
+.pfp2{
+  height:250px;
+  width:auto;
+  border-radius:20px;
+}
+
+.pfp1{
+  height:250px;
+  width:auto;
+  border-radius:20px;
 }
