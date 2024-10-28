@@ -94,18 +94,18 @@
 
 .waves {
   /* Style for animated waves */
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 15vh;
   margin-bottom: -7px;
   min-height: 100px;
   max-height: 150px;
-  top: 460px;
+  top: 230px;
 }
 
 .wider-container {
   /* A wider container */
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -114,8 +114,8 @@
   color: rgb(39, 37, 37);
 }
 
-.main-font{
-  font-size:20px;
+.main-font {
+  font-size: 20px;
 }
 
 /* ----------- Navbar ----------- */
@@ -145,8 +145,8 @@
   background-color: var(--color-2);
 }
 
-.org{
-  font-size: 20px;  
+.org {
+  font-size: 20px;
 
 }
 
@@ -293,9 +293,10 @@
   /* Container for iceberg image */
   max-height: 90vh;
   position: relative;
-  top: 0px;
+  bottom: 80px;
   margin: 50px auto;
   overflow: hidden;
+  animation: bobble 3s infinite ease-in-out;
 }
 
 .iceberg-img {
@@ -339,8 +340,8 @@
   background-color: var(--wave-color);
 }
 
-.about{
-  width:400px;
+.about {
+  width: 400px;
   margin: auto;
 }
 
@@ -376,7 +377,7 @@
   /* Style for location container */
   background-color: var(--color-4);
   font-family: var(--main-font-type);
-  font-size:20px;
+  font-size: 20px;
 }
 
 .map {
@@ -390,8 +391,24 @@
   background-color: var(--wave-color)
 }
 
+/* --- Reviews --- */
+.fa-star {
+  color: var(--color-7);
+}
+
+.no-star {
+  color: var(--color-6);
+}
+
 .reviews {
   background-color: var(--color-4);
+}
+
+.reviews figure {
+  border: 10px solid var(--color-5);
+  border-radius: 25px;
+  background-color: rgb(101, 204, 230);
+  padding: 20px;
 }
 
 /* ----------- Footer ----------- */
@@ -451,7 +468,12 @@
 @media screen and (max-height: 800px) {
   .waves {
     /* Move position of waves when height changes */
-    top: 500px;
+    top: 250px;
+  }
+
+  .iceberg {
+    /* Move position of iceberg when height changes */
+    top: 50px;
   }
 }
 
