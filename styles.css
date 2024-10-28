@@ -121,6 +121,7 @@
 
 .location {
   background-color: var(--color-4);
+  font-family: var(--main-font-type); 
 }
 
 .reviews {
@@ -488,17 +489,17 @@
 
 .footer-img {
   transition: transform 1s ease;
-  padding-bottom:20px;
+  padding-bottom:50px;
 }
 
 .footer-img:hover {
-  transform: rotate(180deg) translateY(30px);
+  transform: rotate(180deg) translateY(50px);
 }
 
-.footer .col-md-4:not(:last-child) {
+.footer .col-md-3:not(:last-child) {
   border-right: 1px solid #ccc;
 }
-.footer .col-md-4 {
+.footer .col-md-3 {
   padding-right: 15px;
 }
 
@@ -525,4 +526,26 @@
   height:250px;
   width:auto;
   border-radius:20px;
+}
+
+
+.wider-container {
+  max-width: 80%; 
+  margin: 0 auto; 
+}
+
+.footer-alto{
+  height:120px;
+  padding-top:15px;
+  width:auto;
+  animation: bobble 1.5s infinite ease-in-out;
+}
+
+.footer-alto:hover {
+  animation-play-state: paused; 
+}
+
+@keyframes bobble {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
