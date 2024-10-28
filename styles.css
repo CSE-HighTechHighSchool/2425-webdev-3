@@ -19,63 +19,19 @@
   --footer-color: var(--color-10);
   --wave-color: var(--color-4);
 
-  --main-font-type: ;
   --title-font-type: 'Concert One';
   --navbar-font-type: 'REM';
-  --footer-font-type: ;
   --button-font-type: 'Concert One';
   --animal-font-type: 'DynaPuff';
 }
 
 
-/* ----------- Class CSS ----------- */
+/* ----------- Style CSS ----------- */
 
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
-}
-
-.logo {
-  height: 50px;
-  width: 50px;
-}
-
-.nb-background-color {
-  /* navbar background color */
-  background-color: var(--navbar-bg-color);
-}
-
-.nb-font {
-  /* navbar font family */
-  font-family: var(--navbar-font-type);
-  font-size: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.nb-title-font {
-  font-family: var(--navbar-font-type);
-  font-size: 25px;
-}
-
-.title-font {
-  font-size: 200px;
-}
-
-.body-background-color {
-  /* body background color */
-  background-color: var(--color-1);
-}
-
-.footer {
-  background-color: var(--footer-color);
-}
-
-.lb-footer {
-  background-color: var(--color-9);
-}
-
-.icon-white {
-  color: white; 
 }
 
 .ocean {
@@ -104,6 +60,11 @@
   animation-timeline: view();
 }
 
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
 .quote {
   padding: 10px 50px;
 }
@@ -112,21 +73,58 @@
   font-size: 20px;
 }
 
-/* Sections CSS */
+.body-background-color {
+  background-color: var(--color-1);
+}
+
+.title-font {
+  font-size: 200px;
+}
+
 .title-space {
   height: 500px;
   font-family: var(--title-font-type);
   color: var(--color-7);
 }
 
-.location {
-  background-color: var(--color-4);
-  font-family: var(--main-font-type); 
+.waves {
+  position: absolute;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+  top: 460px;
 }
 
-.reviews {
-  background-color: var(--color-4);
+.wider-container {
+  max-width: 80%;
+  margin: 0 auto;
 }
+
+.blockquote-footer {
+  color: rgb(39, 37, 37);
+}
+
+/* ----------- Navbar ----------- */
+
+.nb-background-color {
+  background-color: var(--navbar-bg-color);
+}
+
+.nb-font {
+  font-family: var(--navbar-font-type);
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.nb-title-font {
+  font-family: var(--navbar-font-type);
+  font-size: 25px;
+}
+
+/* ----------- Index Page ----------- */
 
 .organization-info {
   background-color: var(--color-2);
@@ -136,13 +134,7 @@
   background-color: var(--color-2);
 }
 
-.animal-font {
-  color: white;
-  font-family: var(--animal-font-type);
-}
-
-/* Donate Button Code */
-
+/* Donate Button Customization */
 .donate-btn {
   width: 130px;
   height: 40px;
@@ -192,7 +184,6 @@
 }
 
 /* Problems (Cards) CSS */
-
 .problems {
   padding: 60px 50px;
 }
@@ -263,17 +254,37 @@
   transform: translateY(0);
 }
 
-/* Animals (Bubble) CSS */
+/* ----------- Learn More ------------*/
 
+/* Iceberg */
+.iceberg {
+  max-height: 90vh;
+  display: flex;
+  color: white;
+  position: relative;
+  top: 0px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.iceberg-img {
+  height: 70vh;
+  display: flex;
+  color: white;
+  position: relative;
+  margin: 50px auto;
+}
+
+/* Animals */
 .animals .item .animal {
   cursor: pointer;
   max-height: 500px;
 }
 
 .animals .item .item-desc .bubble {
-  background-color: var(--footer-color);
+  background-color: var(--color-10);
   border-radius: 40px;
-  border: 10px solid #3479a0; 
+  border: 10px solid #3479a0;
   padding: 25px;
   animation: fadeOut 1s;
   opacity: 0;
@@ -284,14 +295,144 @@
   animation: fadeIn 1s;
 }
 
+.animal-font {
+  color: white;
+  font-family: var(--animal-font-type);
+}
+
+/* ----------- About Us ----------- */
+
+.authors {
+  background-color: var(--wave-color);
+}
+
+.authors-box {
+  background-color: var(--color-10);
+  border-radius: 150px;
+  border: 10px solid #3479a0;
+  padding-left: 50px;
+  padding-top: 20px;
+}
+
+.pfp {
+  max-height: 250px;
+  width: auto;
+  border-radius: 20px;
+}
+
+.sessions {
+  background-color: var(--wave-color)
+}
+
+
+.alto-img {
+  height: 400px;
+  width: auto;
+}
+
+.authors-box {
+  background-color: var(--color-10);
+  border-radius: 150px;
+  border: 10px solid #3479a0;
+  padding-left: 50px;
+  padding-top: 20px;
+}
+
+/* ----------- Booking ----------- */
+
+.location {
+  background-color: var(--color-4);
+  font-family: var(--main-font-type);
+}
+
+.reviews {
+  background-color: var(--color-4);
+}
+
 .map {
   width: 600px;
   min-width: 300px;
   height: 450px;
 }
 
+/* ----------- Footer ----------- */
+
+.footer {
+  background-color: var(--footer-color);
+}
+
+.lm-footer {
+  background-color: var(--color-9);
+}
+
+.footer-alto {
+  height: 120px;
+  padding-top: 15px;
+  width: auto;
+  animation: bobble 1.5s infinite ease-in-out;
+}
+
+.footer-alto:hover {
+  animation-play-state: paused;
+}
+
+.footer-img {
+  transition: transform 1s ease;
+}
+
+.footer-img:hover {
+  transform: rotate(180deg);
+}
+
+.footer .col-md-3:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+
+.footer .col-md-3 {
+  padding-right: 15px;
+}
+
+/* ----------- Responsive CSS ----------- */
+
+@media screen and (max-width: 1420px) {
+  .vertical-scroll-container {
+    scroll-snap-type: none;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .waves {
+    top: 500px;
+  }
+}
+
 /* ----------- Keyframes ----------- */
 
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/* Bobble Up and Down Animation */
+@keyframes bobble {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Transitions for Vertical Scroll Container (Sessions) */
 @keyframes slideInOut {
   entry 0% {
     transform: scale(.8) translateY(100px);
@@ -314,6 +455,7 @@
   }
 }
 
+/* Fade In Transition */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -324,6 +466,7 @@
   }
 }
 
+/* Fade Out Transition */
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -334,91 +477,9 @@
   }
 }
 
-/* Underline Animation CSS */
-.hover-underline-animation {
-  display: inline-block;
-  position: relative;
-  color: #dddddd;
-  transition: color 0.3s ease;
-}
+/* ----------- Animations ----------- */
 
-.hover-underline-animation:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  left: 0;
-  bottom: 0;
-  background-color: #ffffff;
-  transition: transform 0.35s ease-out;
-}
-
-.hover-underline-animation:hover {
-  color: #ffffff;
-}
-
-.hover-underline-animation:hover:after {
-  transform: scaleX(1);
-}
-
-/* ----------- Responsive CSS ----------- */
-
-@media screen and (max-width: 1420px) {
-  .vertical-scroll-container {
-    scroll-snap-type: none;
-  }
-}
-
-/* ----------- Waves ------------*/
-
-
-.inner-header {
-  height: 65vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-
-.waves {
-  position: absolute;
-  width: 100%;
-  height: 15vh;
-  margin-bottom: -7px;
-  min-height: 100px;
-  max-height: 150px;
-  top: 460px;
-}
-
-.content {
-  position: relative;
-  height: 20vh;
-  text-align: center;
-  background-color: var(--wave-color);
-  color: white;
-}
-
-.iceberg {
-  max-height: 90vh;
-  display: flex;
-  color: white;
-  position: relative;
-  top: 0px;
-  margin: 50px auto;
-  overflow: hidden;
-}
-
-.iceberg-img {
-  height: 70vh;
-  display: flex;
-  color: white;
-  position: relative;
-  margin: 50px auto;
-}
-
-/* Animation */
-
+/* Wave Animation */
 .parallax>use {
   animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
@@ -451,97 +512,30 @@
   opacity: 1;
 }
 
-@keyframes move-forever {
-  0% {
-    transform: translate3d(-90px, 0, 0);
-  }
-
-  100% {
-    transform: translate3d(85px, 0, 0);
-  }
+/* Underline Animation CSS */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #dddddd;
+  transition: color 0.3s ease;
 }
 
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(20vh);
-  visibility: hidden;
-  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
-  will-change: opacity, visibility;
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  transition: transform 0.35s ease-out;
 }
 
-.fade-in-section.is-visible {
-  opacity: 1;
-  transform: none;
-  visibility: visible;
+.hover-underline-animation:hover {
+  color: #ffffff;
 }
 
-.authors {
-  background-color: var(--wave-color);
-}
-
-.sessions {
-  background-color: var(--wave-color)
-}
-
-.footer-img {
-  transition: transform 1s ease;
-  padding-bottom:50px;
-}
-
-.footer-img:hover {
-  transform: rotate(180deg) translateY(50px);
-}
-
-.footer .col-md-3:not(:last-child) {
-  border-right: 1px solid #ccc;
-}
-.footer .col-md-3 {
-  padding-right: 15px;
-}
-
-.alto-img {
-  height: 400px; 
-  width: auto; 
-}
-
-.authors-box{
-  background-color: var(--footer-color);
-  border-radius: 150px;
-  border: 10px solid #3479a0; 
-  padding-left:50px;
-  padding-top:20px;
-}
-
-.pfp2{
-  max-height:250px;
-  width:auto;
-  border-radius:20px;
-}
-
-.pfp1{
-  height:250px;
-  width:auto;
-  border-radius:20px;
-}
-
-
-.wider-container {
-  max-width: 80%; 
-  margin: 0 auto; 
-}
-
-.footer-alto{
-  height:120px;
-  padding-top:15px;
-  width:auto;
-  animation: bobble 1.5s infinite ease-in-out;
-}
-
-.footer-alto:hover {
-  animation-play-state: paused; 
-}
-
-@keyframes bobble {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
 }
