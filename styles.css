@@ -114,6 +114,10 @@
   color: rgb(39, 37, 37);
 }
 
+.main-font{
+  font-size:20px;
+}
+
 /* ----------- Navbar ----------- */
 
 .navbar {
@@ -139,6 +143,11 @@
 
 .organization-info {
   background-color: var(--color-2);
+}
+
+.org{
+  font-size: 20px;  
+
 }
 
 .expert-quotes {
@@ -367,6 +376,7 @@
   /* Style for location container */
   background-color: var(--color-4);
   font-family: var(--main-font-type);
+  font-size:20px;
 }
 
 .map {
