@@ -30,6 +30,10 @@
 
 /* ----------- Class CSS ----------- */
 
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
 .logo {
   height: 50px;
   width: 50px;
@@ -266,29 +270,21 @@
 
 .animals .item .animal {
   cursor: pointer;
+  max-height: 500px;
 }
 
 .animals .item .item-desc .bubble {
-  background-image: url(img/bubble.png);
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-  opacity: 0;
+  background-color: var(--footer-color);
+  border-radius: 40px;
+  border: 10px solid #3479a0; 
+  padding: 25px;
   animation: fadeOut 1s;
+  opacity: 0;
 }
 
 .animals .item.active .item-desc .bubble {
   opacity: 1;
   animation: fadeIn 1s;
-}
-
-.animals .item .item-desc .bubble p {
-  position: relative;
-  width: 50%;
-  padding: 10px;
-  top: 95px;
-  left: 70px;
 }
 
 .map {
