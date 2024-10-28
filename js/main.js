@@ -1,3 +1,4 @@
+// Function to add and remove an active class to an element
 function makeActive(event) {
   var clickable = event.target;
 

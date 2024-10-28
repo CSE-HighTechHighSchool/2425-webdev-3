@@ -265,10 +265,6 @@
 
 /* Animals (Bubble) CSS */
 
-.animals .item {
-  height: 700px;
-}
-
 .animals .item .animal {
   cursor: pointer;
   max-height: 500px;
