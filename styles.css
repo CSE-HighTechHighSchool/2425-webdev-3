@@ -31,14 +31,17 @@
 *,
 ::after,
 ::before {
+  /* Make all borders part of width + height of element */
   box-sizing: border-box;
 }
 
 .ocean {
+  /* Apply light blue to dark blue gradient to give appearance of ocean */
   background-image: linear-gradient(var(--color-4), var(--color-9));
 }
 
 .vertical-scroll-container {
+  /* Container that has vertical scroll */
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -53,6 +56,7 @@
 }
 
 .vertical-scroll-container img {
+  /* Make the scroll snap align to images in vertical scroll containers */
   scroll-snap-align: center;
   width: 400px;
 
@@ -61,33 +65,35 @@
 }
 
 .logo {
+  /* Logo size */
   height: 50px;
   width: 50px;
 }
 
-.quote {
-  padding: 10px 50px;
-}
-
-.slogan {
-  font-size: 20px;
-}
-
 .body-background-color {
+  /* Main background color */
   background-color: var(--color-1);
 }
 
 .title-font {
+  /* Style for titles */
   font-size: 200px;
 }
 
+.slogan {
+  /* Style for slogan in index title space */
+  font-size: 20px;
+}
+
 .title-space {
+  /* Title space for each page */
   height: 500px;
   font-family: var(--title-font-type);
   color: var(--color-7);
 }
 
 .waves {
+  /* Style for animated waves */
   position: absolute;
   width: 100%;
   height: 15vh;
@@ -98,21 +104,25 @@
 }
 
 .wider-container {
+  /* A wider container */
   max-width: 80%;
   margin: 0 auto;
 }
 
 .blockquote-footer {
+  /* Style for quote footers */
   color: rgb(39, 37, 37);
 }
 
 /* ----------- Navbar ----------- */
 
-.nb-background-color {
+.navbar {
+  /* Background color for navbar */
   background-color: var(--navbar-bg-color);
 }
 
 .nb-font {
+  /* Font styles for navbar */
   font-family: var(--navbar-font-type);
   font-size: 20px;
   margin-left: 10px;
@@ -120,6 +130,7 @@
 }
 
 .nb-title-font {
+  /* Font style for title in navbar */
   font-family: var(--navbar-font-type);
   font-size: 25px;
 }
@@ -134,8 +145,10 @@
   background-color: var(--color-2);
 }
 
-/* Donate Button Customization */
+/* --- Donate Button CSS --- */
+
 .donate-btn {
+  /* Donate button styles */
   width: 130px;
   height: 40px;
   border-radius: 5px;
@@ -157,6 +170,7 @@
 }
 
 .donate-btn:after {
+  /* Animation when hovering donate button */
   position: absolute;
   content: "";
   width: 100%;
@@ -180,15 +194,18 @@
 }
 
 .donate-btn:active {
+  /* Animation when clicked */
   top: 2px;
 }
 
-/* Problems (Cards) CSS */
+/* --- Problems (Cards) CSS --- */
+
 .problems {
   padding: 60px 50px;
 }
 
 .problems .item {
+  /* Styles for problem cards */
   margin: 0 15px 60px;
   width: 300px;
   height: 400px;
@@ -206,6 +223,7 @@
 }
 
 .problems .item.active {
+  /* Styles for active (clicked) problem cards */
   width: 90%;
   height: 400px;
   box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
@@ -213,6 +231,7 @@
 }
 
 .problems .item:after {
+  /* Additional styles for problem cards */
   content: "";
   display: block;
   position: absolute;
@@ -224,6 +243,7 @@
 }
 
 .problems .item-desc {
+  /* Styles for main text in problem cards */
   padding: 0 24px 12px;
   color: #fff;
   position: relative;
@@ -236,11 +256,13 @@
 }
 
 .problems .item.active .item-desc {
+  /* Show all text when card is active (clicked) */
   transform: none;
   -webkit-transform: none;
 }
 
 .problems .item-desc p {
+  /* Make text not visible when card is not active (clicked) */
   opacity: 0;
   -webkit-transform: translateY(32px);
   transform: translateY(32px);
@@ -249,6 +271,7 @@
 }
 
 .problems .item.active .item-desc p {
+  /* Make text visible when card is active (clicked) */
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
@@ -256,11 +279,10 @@
 
 /* ----------- Learn More ------------*/
 
-/* Iceberg */
+/* --- Iceberg --- */
 .iceberg {
+  /* Container for iceberg image */
   max-height: 90vh;
-  display: flex;
-  color: white;
   position: relative;
   top: 0px;
   margin: 50px auto;
@@ -268,20 +290,20 @@
 }
 
 .iceberg-img {
+  /* Styles for iceberg image */
   height: 70vh;
-  display: flex;
-  color: white;
   position: relative;
   margin: 50px auto;
 }
 
-/* Animals */
+/* --- Animals --- */
 .animals .item .animal {
   cursor: pointer;
   max-height: 500px;
 }
 
 .animals .item .item-desc .bubble {
+  /* Styles for information for animal (invisible when inactive) */
   background-color: var(--color-10);
   border-radius: 40px;
   border: 10px solid #3479a0;
@@ -291,11 +313,13 @@
 }
 
 .animals .item.active .item-desc .bubble {
+  /* Make information for animal visible when active (clicked) */
   opacity: 1;
   animation: fadeIn 1s;
 }
 
 .animal-font {
+  /* Font style for animal label */
   color: white;
   font-family: var(--animal-font-type);
 }
@@ -306,66 +330,74 @@
   background-color: var(--wave-color);
 }
 
-.authors-box {
+.about{
+  width:400px;
+  margin: auto;
+}
+
+.card {
   background-color: var(--color-10);
-  border-radius: 150px;
-  border: 10px solid #3479a0;
-  padding-left: 50px;
-  padding-top: 20px;
+  color: white;
+  font-family: var(--navbar-font-type);
+  margin-bottom: 20px;
+  border-radius: 20px;
+  border: 10px solid #3f82b3;
+}
+
+.card img {
+  border-radius: 15px;
 }
 
 .pfp {
+  /* Style for author images */
   max-height: 250px;
   width: auto;
   border-radius: 20px;
+}
+
+.alto-img {
+  /* Style for mascot image */
+  height: 400px;
+  width: auto;
+}
+
+/* ----------- Booking ----------- */
+
+.location {
+  /* Style for location container */
+  background-color: var(--color-4);
+  font-family: var(--main-font-type);
+}
+
+.map {
+  /* Style for map */
+  width: 600px;
+  min-width: 300px;
+  height: 450px;
 }
 
 .sessions {
   background-color: var(--wave-color)
 }
 
-
-.alto-img {
-  height: 400px;
-  width: auto;
-}
-
-.authors-box {
-  background-color: var(--color-10);
-  border-radius: 150px;
-  border: 10px solid #3479a0;
-  padding-left: 50px;
-  padding-top: 20px;
-}
-
-/* ----------- Booking ----------- */
-
-.location {
-  background-color: var(--color-4);
-  font-family: var(--main-font-type);
-}
-
 .reviews {
   background-color: var(--color-4);
-}
-
-.map {
-  width: 600px;
-  min-width: 300px;
-  height: 450px;
 }
 
 /* ----------- Footer ----------- */
 
 .footer {
+  /* Style for most footers */
   background-color: var(--footer-color);
 }
 
 .lm-footer {
+  /* Style for separate learn more footer */
   background-color: var(--color-9);
 }
 
 .footer-alto {
+  /* Style for mascot image in footer */
   height: 120px;
   padding-top: 15px;
   width: auto;
@@ -373,22 +405,27 @@
 }
 
 .footer-alto:hover {
+  /* Pause animation when hovering image */
   animation-play-state: paused;
 }
 
 .footer-img {
+  /* Transition for arrow (anchor) */
   transition: transform 1s ease;
 }
 
 .footer-img:hover {
+  /* Rotate anchor (arrow) when hovered */
   transform: rotate(180deg);
 }
 
 .footer .col-md-3:not(:last-child) {
+  /* Add borders between footer columns */
   border-right: 1px solid #ccc;
 }
 
 .footer .col-md-3 {
+  /* Add padding between footer columns */
   padding-right: 15px;
 }
 
@@ -396,12 +433,14 @@
 
 @media screen and (max-width: 1420px) {
   .vertical-scroll-container {
+    /* Remove snap scroll when width is small */
     scroll-snap-type: none;
   }
 }
 
 @media screen and (max-height: 800px) {
   .waves {
+    /* Move position of waves when height changes */
     top: 500px;
   }
 }
@@ -410,6 +449,8 @@
 
 
 @keyframes move-forever {
+
+  /* Looping animation for waves */
   0% {
     transform: translate3d(-90px, 0, 0);
   }
@@ -419,9 +460,9 @@
   }
 }
 
-/* Bobble Up and Down Animation */
 @keyframes bobble {
 
+  /* Bobble Up and Down Animation */
   0%,
   100% {
     transform: translateY(0);
@@ -434,6 +475,8 @@
 
 /* Transitions for Vertical Scroll Container (Sessions) */
 @keyframes slideInOut {
+
+  /* Have elements fade in/out and scale when visible on scroll container */
   entry 0% {
     transform: scale(.8) translateY(100px);
     opacity: 0;
@@ -455,8 +498,9 @@
   }
 }
 
-/* Fade In Transition */
 @keyframes fadeIn {
+
+  /* Fade In Transition */
   0% {
     opacity: 0;
   }
@@ -466,8 +510,9 @@
   }
 }
 
-/* Fade Out Transition */
 @keyframes fadeOut {
+
+  /* Fade Out Transition */
   0% {
     opacity: 1;
   }
@@ -479,7 +524,7 @@
 
 /* ----------- Animations ----------- */
 
-/* Wave Animation */
+/* --- Wave Animation CSS --- */
 .parallax>use {
   animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
@@ -512,7 +557,7 @@
   opacity: 1;
 }
 
-/* Underline Animation CSS */
+/* --- Underline Animation CSS --- */
 .hover-underline-animation {
   display: inline-block;
   position: relative;

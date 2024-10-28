@@ -30,7 +30,7 @@
 <body class="body-background-color">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <!-- Website Icon + Website Name -->
             <a href="index.html" class="navbar-brand nb-font">
@@ -65,8 +65,10 @@
         </div>
     </nav>
 
+    <!-- Website Title Space -->
     <section class="title-space">
         <h1 class="p-5 display-1 text-center">Learn More</h1>
+        <!-- Animated Waves -->
         <svg class="waves img-fluid" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <defs>
@@ -79,14 +81,19 @@
                 <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
             </g>
         </svg>
+        <!-- Iceberg Image -->
         <div class="iceberg text-center">
             <img src="img/iceberg.png" class="iceberg-img img-fluid text-center">
         </div>
     </section>
 
+    <!-- Main Information Container (ocean appearance) -->
     <section class="ocean">
         <div style="height: 800px;"></div>
+        <!-- Rows of Animals + Information -->
         <div class="animals container p-5">
+            
+            <!-- Clickable Turtle + Info -->
             <div class="item clickable row p-3">
                 <div class="col-lg-4 m-auto text-center" onclick="makeActive(event)">
                     <img src="img/turtle.png" alt="Sea Turtle" class="animal rounded img-fluid">
@@ -114,6 +121,7 @@
 
             <hr class="text-white">
 
+            <!-- Clickable Jellyfish + Info -->
             <div class="item clickable row p-3">
                 <div class="col m-auto text-center item-desc">
                     <div class="bubble">
@@ -138,6 +146,7 @@
 
             <hr class="text-white">
 
+            <!-- Clickable Shark + Info -->
             <div class="item clickable row p-3">
                 <div class="col-lg-4 m-auto text-center" onclick="makeActive(event)">
                     <img src="img/shark.png" alt="Shark" class="animal rounded img-fluid">
@@ -163,6 +172,7 @@
 
             <hr class="text-white">
 
+            <!-- Clickable Whale + Info -->
             <div class="item clickable row p-3">
                 <div class="col m-auto text-center item-desc">
                     <div class="bubble m-auto">
@@ -185,6 +195,7 @@
                     <h1 class="animal-font">Whale</h1>
                 </div>
             </div>
+
         </div>
     </section>
 
