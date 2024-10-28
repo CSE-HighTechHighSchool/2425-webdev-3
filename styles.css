@@ -38,6 +38,7 @@
 .ocean {
   /* Apply light blue to dark blue gradient to give appearance of ocean */
   background-image: linear-gradient(var(--color-4), var(--color-9));
+  padding-top: 70vh;
 }
 
 .vertical-scroll-container {
