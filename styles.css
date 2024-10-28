@@ -89,7 +89,7 @@
   scrollbar-color: #3848a0 #1b2767;
   scroll-snap-type: y mandatory;
   padding: 200px 20px;
-  height: 400px;
+  height: 600px;
 }
 
 .vertical-scroll-container img {
@@ -371,6 +371,11 @@
 
 /* ----------- Responsive CSS ----------- */
 
+@media screen and (max-width: 1420px) {
+  .vertical-scroll-container {
+    scroll-snap-type: none;
+  }
+}
 
 /* ----------- Waves ------------*/
 
@@ -515,7 +520,7 @@
 }
 
 .pfp2{
-  height:250px;
+  max-height:250px;
   width:auto;
   border-radius:20px;
 }
