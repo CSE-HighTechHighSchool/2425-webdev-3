@@ -110,13 +110,22 @@
   margin: 0 auto;
 }
 
+.session-container {
+  /* A wider container */
+  max-width: 80%;
+  margin: 0 auto;
+}
+
 .blockquote-footer {
   /* Style for quote footers */
   color: rgb(39, 37, 37);
 }
 
 .main-font {
-  font-size: 20px;
+  font-size: 1.7vh;
+}
+.review-font{
+  font-size:1.4vh;
 }
 
 /* ----------- Navbar ----------- */
@@ -147,7 +156,7 @@
 }
 
 .org {
-  font-size: 20px;
+  font-size: 2vh;
 
 }
 
@@ -378,7 +387,7 @@
   /* Style for location container */
   background-color: var(--color-4);
   font-family: var(--main-font-type);
-  font-size: 20px;
+  font-size: 1.7vh;
 }
 
 .map {
@@ -426,7 +435,7 @@
 
 .footer-alto {
   /* Style for mascot image in footer */
-  height: 120px;
+  height: 10vh;
   padding-top: 15px;
   width: auto;
   animation: bobble 1.5s infinite ease-in-out;
