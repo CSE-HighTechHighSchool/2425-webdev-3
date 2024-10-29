@@ -333,6 +333,7 @@
   padding: 25px;
   animation: fadeOut 1s;
   opacity: 0;
+  font-family: var(--navbar-font-type);
 }
 
 .animals .item.active .item-desc .bubble {
