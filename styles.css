@@ -354,11 +354,13 @@
 }
 
 .about {
+  /* Style for author cards */
   width: 400px;
   margin: auto;
 }
 
 .card {
+  /* Style for cards */
   background-color: var(--color-10);
   color: white;
   font-family: var(--navbar-font-type);
@@ -368,6 +370,7 @@
 }
 
 .card img {
+  /* Style for images in cards */
   border-radius: 15px;
 }
 
@@ -406,10 +409,12 @@
 
 /* --- Reviews --- */
 .fa-star {
+  /* Style for filled in star */
   color: var(--color-7);
 }
 
 .no-star {
+  /* Style for not filled in star */
   color: var(--color-6);
 }
 
@@ -418,6 +423,7 @@
 }
 
 .reviews figure {
+  /* Styles for review containers */
   border: 10px solid var(--color-5);
   border-radius: 25px;
   background-color: rgb(101, 204, 230);
