@@ -333,12 +333,15 @@
   padding: 25px;
   animation: fadeOut 1s;
   opacity: 0;
+  display: none;
   font-family: var(--navbar-font-type);
+  margin: 20px auto;
 }
 
 .animals .item.active .item-desc .bubble {
   /* Make information for animal visible when active (clicked) */
   opacity: 1;
+  display: block;
   animation: fadeIn 1s;
 }
 
