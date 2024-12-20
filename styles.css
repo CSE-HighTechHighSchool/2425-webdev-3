@@ -434,6 +434,34 @@
   padding: 20px;
 }
 
+/* ----------- Firebase ----------- */
+
+.ordered-List-item-font{
+  font-size:22px;
+}
+.overview-font{
+  font-size:25px;
+}
+
+.signUpForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.firebase-container{
+  border: 10px solid var(--color-5);
+  border-radius: 25px;
+  margin: auto;
+  padding: 50px
+}
+
+.firebase-img{
+  margin-left: 10px;
+  z-index: -1;
+  background-color:#023E8A;
+}
+
 /* ----------- Footer ----------- */
 
 .footer {
