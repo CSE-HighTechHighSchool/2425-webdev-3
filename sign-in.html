@@ -28,7 +28,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" defer
         integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="js/register.js" defer></script>
+    <script type="module" src="js/sign-in.js" defer></script>
 </head>
 
 <body class="body-background-color">
@@ -73,85 +73,35 @@
     </nav>
 
     <!-- Website Title Space -->
-    <section class="title-space py-5 px-3" style="height: auto;">
-        <div class="container text-center">
-            <h1 class="display-1">Account Registration</h1>
-            <h2 style="font-size: 25px;">Have an account? <a href="sign-in.html">Click here.</a></h2>
+    <section class="title-space pb-5 px-3" style="height: auto;">
+        <div class="container text-center ">
+            <h1 class="display-1 title-font">Sign In</h1>
+            <h2 style="font-size: 50px;">Don't have an account? <a href="register.html">Click here.</a></h2>
         </div>
     </section>
 
     <!--Sign Up -->
-    <section class="container firebase-container p-0">
-        <div class="row p-0">
-            <div class="col-lg-8 firebase-img text-center pt-3">
-                <div class="row p-0">
-                    <div class="col-md-4 text-center m-auto">
-                        <h1 class="display-2 mt-4">Register here!</h1>
-                    </div>
-                    <div class="col-md-3">
-                        <img src="img/alto-register.png" class="alto-firebase">
-                    </div>
+    <div class="signUpForm mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                        
                 </div>
-            </div>
-            <div class="col-lg-3 m-auto">
-                <div class="signUpForm m-5">
-
+                <div class="col-lg-4">
+                    <img> 
                     <form>
                         <input type="text" placeholder="First Name" id="firstName" class="form-control mb-3">
                         <input type="text" placeholder="Last Name" id="lastName" class="form-control mb-3">
                         <input type="email" placeholder="Email" id="userEmail" class="form-control mb-3">
-                        <input type="password" placeholder="Password" id="userPass" class="form-control mb-3">
+                        <input type="password" placeholder="password" id="userPass" class="form-control mb-3">
                         <button type="button" id="submitData" name="submitData"
                             class="btn btn-outline-primary mb-3 w-100">Register</button>
+                        <a href="signIn.html" class="badge bg-secondary py-1 w-100">Already have an account?</a>
                     </form>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="p-5 footer text-light text-center position-relative mt-5">
-        <div class="wider-container container-fluid pb-5">
-            <div class="row">
-                <!-- Section Containing Website Logo/Mascot -->
-                <div class="col-md-3">
-                    <img src="img/alto.png" class="footer-alto bobble-img" alt="footer-alto">
-                </div>
-
-                <!-- Links to Social Media (non-functional) -->
-                <div class="col-md-3">
-                    <h5 class="main-font">Follow Us</h5>
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                    <i class="fab fa-twitter"></i>
-                    <p>Note: These social media icons are not functional</p>
-                </div>
-
-                <!-- Links to Other Pages -->
-                <div class="col-md-3">
-                    <h5 class="main-font">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="learn-more.html" class="text-light main-font">Learn More</a></li>
-                        <li><a href="about-us.html" class="text-light main-font">About Us</a></li>
-                        <li><a href="booking.html" class="text-light main-font">Book a Trip!</a></li>
-                    </ul>
-                </div>
-
-                <!-- Copyright Info -->
-                <div class="col-md-3">
-                    <h5 class="main-font">About</h5>
-                    <p class="main-font">Copyright &copy; SE 2024 Website Design Project </p>
-                    <p class="main-font">Designed By: Audrey Wang and Richard Nguyen </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Arrow to Top -->
-        <a href="#" class="p-1 m-1">
-            <img src="img/anchor.png" class="footer-img" alt="Anchor Arrow">
-        </a>
-    </footer>
+    </div>
 
 </body>
 
