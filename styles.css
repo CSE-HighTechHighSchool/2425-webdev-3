@@ -124,10 +124,12 @@
 .main-font {
   font-size: 1.7vh;
 }
-.review-font{
-  font-size:1.4vh;
+
+.review-font {
+  font-size: 1.4vh;
 }
-.nav-font{
+
+.nav-font {
   font-size: 2vh;
 }
 
@@ -436,45 +438,44 @@
 
 /* ----------- Firebase ----------- */
 
-.ordered-List-item-font{
-  font-size:22px;
-}
-.overview-font{
-  font-size:25px;
+.ordered-List-item-font {
+  font-size: 22px;
 }
 
-.signUpForm{
+.overview-font {
+  font-size: 25px;
+}
+
+.signUpForm {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.firebase-container{
+.firebase-container {
   border: 10px solid var(--color-5);
   border-radius: 25px;
   margin: auto;
-  padding: 50px;
-  height: 30vw;
+  padding: 50px auto;
   font-family: var(--title-font-type);
   color: white;
 }
 
-.firebase-img{
-  margin-left: 10px;
-  padding-top: 50px;
-  padding-right: 50px;
-  height: 29vw;
+.firebase-text {
+  margin-left: 50px;
+}
+
+.firebase-img {
+  margin-left: .5vw;
   z-index: -1;
   background-color: var(--color-5);
 }
 
-.alto-firebase{
+.firebase-alto {
   height: 20vw;
   width: auto;
-  margin-top: 40px;
-  position: relative;
-  right: 150px
-
+  margin-left: 170px;
+  animation: bobble 1.5s infinite ease-in-out;
 }
 
 /* ----------- Footer ----------- */
