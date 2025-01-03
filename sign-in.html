@@ -28,7 +28,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" defer
         integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="js/register.js" defer></script>
+    <script type="module" src="js/sign-in.js" defer></script>
 </head>
 
 <body class="body-background-color">
@@ -73,35 +73,35 @@
     </nav>
 
     <!-- Website Title Space -->
-    <section class="title-space py-5 px-3" style="height: auto;">
-        <div class="container text-center">
-            <h1 class="display-1">Account Registration</h1>
-            <h2 style="font-size: 25px;">Have an account? <a href="sign-in.html">Click here.</a></h2>
+    <section class="title-space pb-5 px-3" style="height: auto;">
+        <div class="container text-center ">
+            <h1 class="display-1 title-font">Sign In</h1>
+            <h2 style="font-size: 50px;">Don't have an account? <a href="register.html">Click here.</a></h2>
         </div>
     </section>
 
     <!--Sign Up -->
-    <section class="container firebase-container p-0">
-            <div class="row p-0">
-                <div class="col-lg-7 firebase-img">
-
+    <div class="signUpForm mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                        
                 </div>
-                <div class="col-lg-3 m-auto">
-                    <div class="signUpForm m-5">
-
-                        <form>
-                            <input type="text" placeholder="First Name" id="firstName" class="form-control mb-3">
-                            <input type="text" placeholder="Last Name" id="lastName" class="form-control mb-3">
-                            <input type="email" placeholder="Email" id="userEmail" class="form-control mb-3">
-                            <input type="password" placeholder="password" id="userPass" class="form-control mb-3">
-                            <button type="button" id="submitData" name="submitData"
-                                class="btn btn-outline-primary mb-3 w-100">Register</button>
-                            <a href="signIn.html" class="badge bg-secondary py-1 w-100">Already have an account?</a>
-                        </form>
-                    </div>
+                <div class="col-lg-4">
+                    <img> 
+                    <form>
+                        <input type="text" placeholder="First Name" id="firstName" class="form-control mb-3">
+                        <input type="text" placeholder="Last Name" id="lastName" class="form-control mb-3">
+                        <input type="email" placeholder="Email" id="userEmail" class="form-control mb-3">
+                        <input type="password" placeholder="password" id="userPass" class="form-control mb-3">
+                        <button type="button" id="submitData" name="submitData"
+                            class="btn btn-outline-primary mb-3 w-100">Register</button>
+                        <a href="signIn.html" class="badge bg-secondary py-1 w-100">Already have an account?</a>
+                    </form>
                 </div>
             </div>
-    </section>
+        </div>
+    </div>
 
 </body>
 
