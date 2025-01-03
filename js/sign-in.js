@@ -100,7 +100,7 @@ function logIn(user) {
     else {
         localStorage.setItem('keepLoggedIn', 'yes');
         localStorage.setItem('user', JSON.stringify(user));
-        window.location.href = 'home.html';
+        window.location.href = 'planning.html';
     }
 
 }
