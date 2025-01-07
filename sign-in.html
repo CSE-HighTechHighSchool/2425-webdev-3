@@ -80,35 +80,87 @@
     </nav>
 
     <!-- Website Title Space -->
-    <section class="title-space pb-5 px-3" style="height: auto;">
-        <div class="container text-center ">
-            <h1 class="display-1 title-font">Sign In</h1>
-            <h2 style="font-size: 50px;">Don't have an account? <a href="register.html">Click here.</a></h2>
+    <section class="title-space py-5 px-3" style="height: auto;">
+        <div class="container text-center">
+            <h1 class="display-1">Account Sign-in</h1>
+            <h2 style="font-size: 25px;">Don't have an account? <a href="register.html">Click here.</a></h2>
         </div>
     </section>
 
-    <!--Sign Up -->
-    <div class="signUpForm mb-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                        
+    <!-- Sign Up -->
+    <section class="container firebase-container p-0">
+        <div class="row">
+            <div class="col-lg-7 firebase-img text-center pt-4 d-none d-lg-block">
+                <div class="container-fluid">
+                    <div class="row text-center align-items-center p-0">
+                        <div class="col-md-5 text-center">
+                            <h1 class="display-1 firebase-text" style="margin-left: 3.5rem; font-size: 5vw; width: 20vw">Sign in here!</h1>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="img/alto-register.png" class="firebase-alto mx-3" style="max-width: 100%; height: auto;">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-4">
-                    <img> 
+            </div>
+            <div class="col-lg-3 m-auto">
+                <div class="signUpForm m-5">
                     <form>
-                        <input type="text" placeholder="First Name" id="firstName" class="form-control mb-3">
-                        <input type="text" placeholder="Last Name" id="lastName" class="form-control mb-3">
-                        <input type="email" placeholder="Email" id="userEmail" class="form-control mb-3">
-                        <input type="password" placeholder="password" id="userPass" class="form-control mb-3">
-                        <button type="button" id="submitData" name="submitData"
-                            class="btn btn-outline-primary mb-3 w-100">Register</button>
-                        <a href="signIn.html" class="badge bg-secondary py-1 w-100">Already have an account?</a>
+                        <input type="email" placeholder="Email" id="loginEmail" class="form-control mb-3">
+                        <input type="password" placeholder="Password" id="loginPassword" class="form-control mb-3">
+                        <div class="form-check form-switch mb-3">
+                            <input class="form-check-input" type="checkbox" role="switch" id="keepLoggedInSwitch">
+                            <label class="form-check-label text-muted" for="flexSwitchCheckDefault">Keep me signed in</label>
+                        </div>
+                        <button type = "button" id="signIn" name="signIn" class="btn btn-outline-primary mb-3 w-100">Sign In</button>
                     </form>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-5 footer text-light text-center position-relative mt-5">
+        <div class="wider-container container-fluid pb-5">
+            <div class="row">
+                <!-- Section Containing Website Logo/Mascot -->
+                <div class="col-md-3">
+                    <img src="img/alto.png" class="footer-alto bobble-img" alt="footer-alto">
+                </div>
+
+                <!-- Links to Social Media (non-functional) -->
+                <div class="col-md-3">
+                    <h5 class="main-font">Follow Us</h5>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-twitter"></i>
+                    <p>Note: These social media icons are not functional</p>
+                </div>
+
+                <!-- Links to Other Pages -->
+                <div class="col-md-3">
+                    <h5 class="main-font">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="learn-more.html" class="text-light main-font">Learn More</a></li>
+                        <li><a href="about-us.html" class="text-light main-font">About Us</a></li>
+                        <li><a href="booking.html" class="text-light main-font">Book a Trip!</a></li>
+                    </ul>
+                </div>
+
+                <!-- Copyright Info -->
+                <div class="col-md-3">
+                    <h5 class="main-font">About</h5>
+                    <p class="main-font">Copyright &copy; SE 2024 Website Design Project </p>
+                    <p class="main-font">Designed By: Audrey Wang and Richard Nguyen </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arrow to Top -->
+        <a href="#" class="p-1 m-1">
+            <img src="img/anchor.png" class="footer-img" alt="Anchor Arrow">
+        </a>
+    </footer>
 
 </body>
 
