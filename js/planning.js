@@ -15,14 +15,14 @@ import { getDatabase, ref, set, update, child, get, remove }
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAJ7i7nE08rD_OnUl6JNdCf-TGUGYBV-Dw",
-    authDomain: "wang-se2425-firebase-dem-ed51a.firebaseapp.com",
-    databaseURL: "https://wang-se2425-firebase-dem-ed51a-default-rtdb.firebaseio.com",
-    projectId: "wang-se2425-firebase-dem-ed51a",
-    storageBucket: "wang-se2425-firebase-dem-ed51a.firebasestorage.app",
-    messagingSenderId: "825777387898",
-    appId: "1:825777387898:web:7ec753b015d89579c23ec3"
-};
+    apiKey: "AIzaSyCDKbqiPJ6a-c3KwAC856uxFCa-F9eJ4Lw",
+    authDomain: "webdev-3-77770.firebaseapp.com",
+    databaseURL: "https://webdev-3-77770-default-rtdb.firebaseio.com",
+    projectId: "webdev-3-77770",
+    storageBucket: "webdev-3-77770.firebasestorage.app",
+    messagingSenderId: "389459481710",
+    appId: "1:389459481710:web:9af5534ea0e5a64609427f"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
