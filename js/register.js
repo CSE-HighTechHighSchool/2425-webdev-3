@@ -26,8 +26,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth()
-const db = getDatabase(app)
+const auth = getAuth();
+const db = getDatabase(app);
 
 
 // ---------------- Register New User --------------------------------//

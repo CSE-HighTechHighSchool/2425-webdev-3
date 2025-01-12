@@ -92,7 +92,7 @@ function logIn(user) {
     // Session starge will be cleard with a signOut() function is home.js
     if (!keepLoggedIn) {
         sessionStorage.setItem('user', JSON.stringify(user));
-        window.location.href = 'home.html';
+        window.location.href = 'index.html';
     }
 
     // Local storage is permanent (keep user logged in even if browser is closed)

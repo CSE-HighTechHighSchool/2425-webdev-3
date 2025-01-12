@@ -30,7 +30,7 @@ const app = initializeApp(firebaseConfig);
 // Initialize Firebase Authentication
 const auth = getAuth();
 
-const db = getDatabase(app)
+const db = getDatabase(app);
 
 
 // ---------------------// Get reference values -----------------------------
@@ -60,7 +60,7 @@ function getUserName(){
 function signOutUser(){
   sessionStorage.removeItem('user');              // Clear session storage
   localStorage.removeItem('user');                // Clear local storage
-  localStorage.removeItem('keepLoggedIN)');       // Clear logged in setting
+  localStorage.removeItem('keepLoggedIn)');       // Clear logged in setting
 
 
   signOut(auth).then(() => {
