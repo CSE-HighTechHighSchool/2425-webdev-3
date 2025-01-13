@@ -137,70 +137,168 @@ function getData(userID, year, month, day){
 // Must be an async function because you need to get all the data from FRD
 // before you can process it for a table or graph
 
-async function getDataSet(userID, year, month){
+async function getDataSet(userID, year){
   
   let yearVal = document.getElementById('setYearVal');
-  let monthVal = document.getElementById('setMonthVal');
-  
-  
+  // let monthVal = document.getElementById('setMonthVal');
   yearVal.textContent = `Year: ${year}`;
-  monthVal.textContent = `Month: ${month}`;
+  // monthVal.textContent = `Month: ${month}`;
 
-  const days = [];
-  const attends = [];
-  const tbodyE1 = document.getElementById('tbody-2');    // select <tbody-2> elem.
+  const monthsArray = [];
+  const monthlyTotals = [];
+
+  // const days = [];
+  // const attends = [];
 
   const dbref = ref(db);
 
-  // Wait for all data to be pulled from FB
-  // Must provide path through the nodes to the data
-  await get(child(dbref, 'users/' + userID + '/data/' + year + '/' + month)).then((snapshot) => {
 
-    if(snapshot.exists()){
-      console.log(snapshot.val())
+  try {
+    const snapshot = await get(child(dbref, 'users/' + userID + '/data/' + year));
+    
+    if (snapshot.exists()) {
+      // For each month found under that year
+      snapshot.forEach((monthSnapshot) => {
+        // monthKey might be "Jan", "Feb", or "03", etc.
+        const monthKey = monthSnapshot.key;
 
-      snapshot.forEach(child => {
-        days.push(child.key);
-        attends.push(child.val());
+        // Sum up the daily attendance in this month
+        let sumForMonth = 0;
+        monthSnapshot.forEach((daySnapshot) => {
+          if(daySnapshot.val()>0) {
+            sumForMonth ++;
+          }
+        });
+
+        // Store results in arrays
+        monthsArray.push(monthKey);
+        monthlyTotals.push(sumForMonth);
       });
+    } else {
+      alert('No months found for the given year.');
+      return;
     }
-    else{
-      alert('No data found')
+    } catch (error) {
+      alert('Unsuccessful. Error: ' + error);
+      return;
     }
-  })
-  .catch((error)=> {
-    alert('unsuccessful, error' + error);
-  });
-
-  // dyanmically add table rows to html using string interpolation
-  tbodyE1.innerHTML = '';   // clear any existing table
-
-  for(let i = 0; i < days.length; i++){
-    addItemToTable(days[i], attends[i], tbodyE1)
+    console.log(monthsArray)
+    console.log(monthlyTotals)
+    // Create or update the scatter chart
+    createMonthlyScatterChart(monthsArray, monthlyTotals);
   }
-
-}
-
-// Add a item to the table of data
-
-function addItemToTable(day, attend, tbody){
+    
   
-  //  console.log(day, temp)
-
-  let tableRow = document.createElement('tr');
-  let td1 = document.createElement('td');
-  let td2 = document.createElement('td');
-
-  td1.innerHTML = day;
-  td2.innerHTML = attend;
-
-  tableRow.appendChild(td1);
-  tableRow.appendChild(td2);
-
-  tbody.appendChild(tableRow);  
   
-}
+  function createMonthlyScatterChart(monthsArray, monthlyTotals) {
+    const monthMap = {
+      "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4,
+      "May": 5, "Jun": 6, "Jul": 7, "Aug": 8,
+      "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12
+    };
+    
+      const dataPoints = monthsArray.map((m, i) => {
+      const xVal = monthMap[m];           
+      const yVal = monthlyTotals[i];    
+      return { x: xVal, y: yVal };
+    });
 
+    console.log(dataPoints)
+
+    const ctx = document.getElementById('scatterChart');
+  
+    if (window.myScatterChart) {
+      window.myScatterChart.destroy();
+    }
+  
+    window.myScatterChart = new Chart(ctx, {
+      type: 'scatter',
+      data: {
+        datasets: [
+          {
+            label: 'Visits',
+            font: {
+              family:'REM',
+            },
+            data: dataPoints,
+            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            pointRadius: 5,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            type: 'linear',
+            position: 'bottom',
+            title: {
+              display: true,
+              text: 'Month',
+              font: {
+                family:'REM', 
+              }
+            },
+            min: 1,
+            max: 12,
+            ticks: {
+              stepSize: 1,
+              callback: function (value) {
+                const monthNames = [
+                  '',
+                  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+                ];
+                return monthNames[value]; 
+              },
+            },
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Total Visits per Month',
+              font: {
+                family:'REM',
+              }
+            },
+            type: 'linear',
+            suggestedMin: 0,
+            suggestedMax: 31,
+            tick: {
+              maxTickLimit: 31,
+              stepSize: 5,
+              callback: function(value) {
+                return Number.isInteger(value) ? value : '';
+              },
+              font: {
+                  size: 12,
+                  family:'REM',
+              }
+          },
+          },
+        },
+        plugins: {
+          title: {
+            display: true,
+            text: 'Yearly Visit Schedule',
+            font: {
+              size: 20,
+              family:'REM',
+            },
+            padding: { top: 10, bottom: 10 },
+          },
+          legend: {
+            position: 'top',
+            font: {
+              
+            }
+          },
+        },
+      },
+    });
+  }
 
 // -------------------------Delete a day's data from FRD ---------------------
 
@@ -213,7 +311,7 @@ function deleteData(userID, year, month, day) {
   if (confirmDelete) {
     remove(ref(db, 'users/' + userID + '/data/' + year + '/' + month + '/' + day))
       .then(() => {
-        alert('Aw, sorry you canceled your visit :(');
+        alert('Aw, sorry you canceled your visit.');
       })
       .catch((error) => {
         alert('Unsuccessful, error: ' + error);
@@ -295,10 +393,9 @@ window.onload = function(){
   // Get a data set function call
   document.getElementById('getDataSet').onclick = function(){
     const year = document.getElementById('getSetYear').value;
-    const month = document.getElementById('getSetMonth').value;
     const userID = currentUser.uid;
 
-    getDataSet(userID, year, month);
+    getDataSet(userID, year);
   };
   // Delete a single day's data function call
   document.getElementById('delete').onclick = function(){

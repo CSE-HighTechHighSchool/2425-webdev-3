@@ -534,6 +534,19 @@ h1 a:hover {
   font-family: var(--main-font-type)
 }
 
+#chart-wrapper{
+  margin: auto;
+  padding: 10px;
+  /* If nesting a chart's container within another container, remove the 
+     height and width values.  The outer container will control the dimensions */ 
+  height: 40vh; 
+  width:  80vw;
+  min-height: 400px;
+  background-color: whitesmoke !important;
+  justify-content: center;
+  align-items: center;  
+}
+
 /* ----------- Footer ----------- */
 
 .footer {
