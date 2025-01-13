@@ -66,7 +66,8 @@
                             class="nav-link hover-underline-animation nb-menu-item text-white main-font">Booking</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link hover-underline-animation nb-menu-item text-white main-font" id="registerMenu" data-bs-toggle="dropdown" aria-expanded="false">Register/Sign In</a>
+                        <a href="#" class="nav-link hover-underline-animation nb-menu-item text-white main-font"
+                            id="registerMenu" data-bs-toggle="dropdown" aria-expanded="false">Register/Sign In</a>
                         <ul class="dropdown-menu" aria-labelledby="registerMenu">
                             <li><a class="dropdown-item" href="sign-in.html">Sign In</a></li>
                             <li><a class="dropdown-item" href="register.html">Create New Account</a></li>
@@ -79,13 +80,16 @@
 
     <!--Firebase Data Operations -->
     <!--Set and Update Data-->
-    <div class="container">
-        <br><br><h1 class = "planning-section-font">Schedule/Update Your Visit</h1><br>
-        <ol class="list-group list-group-numbered notes">
-            <li class="list-group-item border-0"><strong>Select a Date for Your Visit:</strong> Use the drop-down menu to pick the year, month, and day of your visit.</li>
-            <li class="list-group-item border-0"><strong>Specify the Number of Visitors:</strong> Enter the number of people in your group to ensure appropriate accommodations.</li>
+    <div class="container planning-section px-5">
+        <br><br>
+        <h1 class="planning-section-font">Schedule/Update Your Visit</h1><br>
+        <ol class="instructions">
+            <li class=""><strong>Select a Date for Your Visit:</strong> Use the drop-down menu
+                to pick the year, month, and day of your visit.</li>
+            <li class=""><strong>Specify the Number of Visitors:</strong> Enter the number of
+                people in your group to ensure appropriate accommodations.</li>
         </ol><br>
-        
+
         <div class="container dataForm mb-5">
             <form>
                 <select class="form-select mb-3" aria-label="Default select example" id="year">
@@ -145,22 +149,25 @@
                     <option value="29">29</option>
                     <option value="30">30</option>
                     <option value="31">31</option>
-                                
+
                 </select>
                 <input type="text" class="form-control mb-3" placeholder="Number of Attendees" id="attendees">
-                <button type = "button" id="set" name="set" class="btn btn-outline-primary mb-3 w-100">Set</button>
-                <button type = "button" id="update" name="update" class="btn btn-outline-secondary mb-3 w-100">Update</button>
-            </form>       
+                <button type="button" id="set" name="set" class="btn btn-outline-primary mb-3 w-100">Set</button>
+                <button type="button" id="update" name="update"
+                    class="btn btn-outline-secondary mb-3 w-100">Update</button>
+            </form>
         </div>
     </div><br>
 
     <!--Get a single datum -->
-    <div class="container border">
-        <br><h1 class = "planning-section-font">Registered Visit Dates</h1><br>
-        <ol class="list-group list-group-numbered notes">
-            <li class="list-group-item border-0"><strong>View Your Registered Dates:</strong> Access a list of all your registered museum visit dates</li>
+    <div class="container planning-section px-5">
+        <br>
+        <h1 class="planning-section-font">Registered Visit Dates</h1><br>
+        <ol class="instructions">
+            <li class=""><strong>View Your Registered Dates:</strong> Access a list of all your
+                registered museum visit dates</li>
         </ol><br>
-        
+
         <div class="container dataForm mb-5">
             <form>
                 <select class="form-select mb-3" aria-label="Default select example" id="getYear">
@@ -219,41 +226,51 @@
                     <option value="28">28</option>
                     <option value="29">29</option>
                     <option value="30">30</option>
-                    <option value="31">31</option>                                
+                    <option value="31">31</option>
                 </select>
-                <button type = "button" id="get" name="get" class="btn btn-outline-primary mb-3 w-100">get</button>
-            </form>       
+                <button type="button" id="get" name="get" class="btn btn-outline-primary mb-3 w-100">get</button>
+            </form>
         </div>
 
         <!-- Table for displaying selected data -->
-        <table class="table">
+        <table class="table table-info">
             <thead>
-              <tr>
-                <th scope="col">Year</th>
-                <th scope="col">Month</th>
-                <th scope="col">Day</th>
-                <th scope="col"># of Attendees</th>
-              </tr>
+                <tr>
+                    <th scope="col">Year</th>
+                    <th scope="col">Month</th>
+                    <th scope="col">Day</th>
+                    <th scope="col"># of Attendees</th>
+                </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><p id ="yearVal"></p></td>
-                <td><p id ="monthVal"></td>
-                <td><p id ="dayVal"></td>
-                <td><p id ="attendVal"></p></td>
-              </tr>
-              <tr>
+                <tr>
+                    <td>
+                        <p id="yearVal"></p>
+                    </td>
+                    <td>
+                        <p id="monthVal">
+                    </td>
+                    <td>
+                        <p id="dayVal">
+                    </td>
+                    <td>
+                        <p id="attendVal"></p>
+                    </td>
+                </tr>
+                <tr>
             </tbody>
-          </table>
+        </table>
     </div><br>
 
     <!--Get a data set -->
-    <div class="container border">
-        <br><h1 class = "planning-section-font">Montly Registered Visits</h1><br>
-        <ol class="list-group list-group-numbered notes">
-            <li class="list-group-item border-0"><strong>View Monthly Overview:</strong> Access the "Monthly Visits" section to see an overview of all registered visits for the current month.</li>
+    <div class="container planning-section px-5">
+        <br>
+        <h1 class="planning-section-font">Monthly Registered Visits</h1><br>
+        <ol class="instructions">
+            <li class="border-0"><strong>View Monthly Overview:</strong> Access the "Monthly Visits"
+                section to see an overview of all registered visits for the current month.</li>
         </ol><br>
-        
+
         <div class="container dataForm mb-5">
             <form>
                 <select class="form-select mb-3" aria-label="Default select example" id="getSetYear">
@@ -280,8 +297,9 @@
                     <option value="Nov">Nov</option>
                     <option value="Dec">Dec</option>
                 </select>
-                <button type = "button" id="getDataSet" name="getDataSet" class="btn btn-outline-primary mb-3 w-100">Get Dataset</button>
-            </form>       
+                <button type="button" id="getDataSet" name="getDataSet" class="btn btn-outline-primary mb-3 w-100">Get
+                    Dataset</button>
+            </form>
         </div>
 
         <div>
@@ -291,14 +309,14 @@
 
         <!-- Table for displaying data set -->
         <div class="container">
-            <table class="table">
+            <table class="table table-info">
                 <thead>
-                <tr>
-                    <th scope="col">Day</th>
-                    <th scope="col"># of Attendees</th>
-                </tr>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col"># of Attendees</th>
+                    </tr>
                 </thead>
-                <tbody id = "tbody-2">
+                <tbody id="tbody-2">
                 </tbody>
             </table>
         </div>
@@ -307,13 +325,16 @@
     </div><br>
 
     <!--Delete Data-->
-    <div class="container border">
-        <br><h1 class = "planning-section-font">Cancel Your Visit</h1><br>
-        <ol class="list-group list-group-numbered notes">
-            <li class="list-group-item border-0"><strong>Select the Visit:</strong> Select the year, month, and day of your registered visit.</li>
-            <li class="list-group-item border-0"><strong>Confirm the Cancellation:</strong> Cancel your visit and reregister in the Schedule Your Visit above!</li>
+    <div class="container planning-section px-5">
+        <br>
+        <h1 class="planning-section-font">Cancel Your Visit</h1><br>
+        <ol class="instructions">
+            <li class="border-0"><strong>Select the Visit:</strong> Select the year, month, and day of
+                your registered visit.</li>
+            <li class="border-0"><strong>Confirm the Cancellation:</strong> Cancel your visit and
+                reregister in the Schedule Your Visit above!</li>
         </ol><br>
-        
+
         <div class="container dataForm mb-5">
             <form>
                 <select class="form-select mb-3" aria-label="Default select example" id="delYear">
@@ -372,10 +393,11 @@
                     <option value="28">28</option>
                     <option value="29">29</option>
                     <option value="30">30</option>
-                    <option value="31">31</option>                                
+                    <option value="31">31</option>
                 </select>
-                <button type = "button" id="delete" name="delete" class="btn btn-outline-primary mb-3 w-100">Delete</button>
-            </form>       
+                <button type="button" id="delete" name="delete"
+                    class="btn btn-outline-primary mb-3 w-100">Delete</button>
+            </form>
         </div>
     </div><br>
     <!-- Footer -->
@@ -422,4 +444,5 @@
         </a>
     </footer>
 </body>
+
 </html>
