@@ -74,13 +74,13 @@ function signOutUser(){
 
 
 // ------------------------Set (insert) data into FRD ------------------------
-function setData(userID, year, month, day, temperature){
+function setData(userID, year, month, day, attendees){
   // Must use brackets around variable name to use it as a key
   set(ref(db, 'users/' + userID + '/data/' + year + '/' + month), {
-    [day]: temperature
+    [day]: attendees
 })
 .then(() => {
-  alert('Data stored successfully')
+  alert('Thanks for your registration!')
 })
 .catch((error) => {
   alert ('There was an erorr. Error: ' + error);
@@ -89,13 +89,13 @@ function setData(userID, year, month, day, temperature){
 
 
 // -------------------------Update data in database --------------------------
-function updateData(userID, year, month, day, temperature){
+function updateData(userID, year, month, day, attendees){
   // Must use brackets around variable name to use it as a key
   update(ref(db, 'users/' + userID + '/data/' + year + '/' + month), {
-    [day]: temperature
+    [day]: attendees
 })
 .then(() => {
-  alert('Data updated successfully')
+  alert('Thanks for updating your visit!')
 })
 .catch((error) => {
   alert ('There was an erorr. Error: ' + error);
@@ -108,7 +108,7 @@ function getData(userID, year, month, day){
   let yearVal = document.getElementById('yearVal');
   let monthVal = document.getElementById('monthVal');
   let dayVal = document.getElementById('dayVal');
-  let tempVal = document.getElementById('tempVal');
+  let attendVal = document.getElementById('attendVal');
 
   const dbref = ref(db);  // firebase parameter for requesting data
 
@@ -120,7 +120,7 @@ function getData(userID, year, month, day){
       dayVal.textContent = day;
       
       // to get specific value from a key: snapshot.value()[key]
-      tempVal.textContent = snapshot.val()[day]
+      attendVal.textContent = snapshot.val()[day]
 
     } else{
       alert('No data found')
@@ -147,7 +147,7 @@ async function getDataSet(userID, year, month){
   monthVal.textContent = `Month: ${month}`;
 
   const days = [];
-  const temps = [];
+  const attends = [];
   const tbodyE1 = document.getElementById('tbody-2');    // select <tbody-2> elem.
 
   const dbref = ref(db);
@@ -161,7 +161,7 @@ async function getDataSet(userID, year, month){
 
       snapshot.forEach(child => {
         days.push(child.key);
-        temps.push(child.val());
+        attends.push(child.val());
       });
     }
     else{
@@ -176,14 +176,14 @@ async function getDataSet(userID, year, month){
   tbodyE1.innerHTML = '';   // clear any existing table
 
   for(let i = 0; i < days.length; i++){
-    addItemToTable(days[i], temps[i], tbodyE1)
+    addItemToTable(days[i], attends[i], tbodyE1)
   }
 
 }
 
 // Add a item to the table of data
 
-function addItemToTable(day, temp, tbody){
+function addItemToTable(day, attend, tbody){
   
   //  console.log(day, temp)
 
@@ -192,7 +192,7 @@ function addItemToTable(day, temp, tbody){
   let td2 = document.createElement('td');
 
   td1.innerHTML = day;
-  td2.innerHTML = temp;
+  td2.innerHTML = attend;
 
   tableRow.appendChild(td1);
   tableRow.appendChild(td2);
@@ -204,14 +204,23 @@ function addItemToTable(day, temp, tbody){
 
 // -------------------------Delete a day's data from FRD ---------------------
 
-function deleteData(userID, year, month, day){
-  remove(ref(db, 'users/' + userID + '/data/' + year + '/' + month + '/' + day))
-  .then(() => {
-    alert('data removed successfully')
-  })
-  .catch((error) => {
-    alert('unsuccessful, error' + error);
-  })
+function deleteData(userID, year, month, day) {
+  
+  // Clarification Message
+  const confirmDelete = confirm(`Are you sure you want to delete the data for ${year}/${month}/${day}?`);
+  
+  // Proceed if the user confirms
+  if (confirmDelete) {
+    remove(ref(db, 'users/' + userID + '/data/' + year + '/' + month + '/' + day))
+      .then(() => {
+        alert('Aw, sorry you canceled your visit :(');
+      })
+      .catch((error) => {
+        alert('Unsuccessful, error: ' + error);
+      });
+  } else {
+    alert('Deletion canceled');
+  }
 }
 
 // --------------------------- Home Page Loading -----------------------------
@@ -254,10 +263,10 @@ window.onload = function(){
     const year = document.getElementById('year').value
     const month = document.getElementById('month').value
     const day = document.getElementById('day').value
-    const temperature = document.getElementById('temperature').value
+    const attendees = document.getElementById('attendees').value
     const userID = currentUser.uid;
     
-    setData(userID, year, month, day, temperature);
+    setData(userID, year, month, day, attendees);
   }
 
   // Update data function call
@@ -266,10 +275,10 @@ window.onload = function(){
     const year = document.getElementById('year').value
     const month = document.getElementById('month').value
     const day = document.getElementById('day').value
-    const temperature = document.getElementById('temperature').value
+    const attendees = document.getElementById('attendees').value
     const userID = currentUser.uid;
     
-    updateData(userID, year, month, day, temperature);
+    updateData(userID, year, month, day, attendees);
   }
   // Get a datum function call
   

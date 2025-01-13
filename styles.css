@@ -413,6 +413,32 @@
   background-color: var(--wave-color)
 }
 
+h1 a{
+  color: var(--color-7);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+h1 a i {
+  font-size: 0.5em;
+  letter-spacing: 0.2em;
+  margin-left: 20px;
+  margin-right:20px;
+  margin-top:20px;
+  animation: bobble 1s infinite; 
+}
+
+h1 a:hover i {
+  animation: none; 
+  transform: translateY(0); 
+}
+
+/* Optional: Add a hover effect to the link */
+h1 a:hover {
+  color: var(--color-9); /* change color when hovered */
+}
+
 /* --- Reviews --- */
 .fa-star {
   /* Style for filled in star */
@@ -478,8 +504,16 @@
   animation: bobble 1.5s infinite ease-in-out;
 }
 
+/* ----------- Planning ---------- */
 
+.planning-section-font{
+  font-family: var(--title-font-type);
+  color: var(--color-7);
+}
 
+.list-group-item{
+  font-family: var(--main-font-type);
+}
 /* ----------- Footer ----------- */
 
 .footer {

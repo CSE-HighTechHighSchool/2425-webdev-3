@@ -80,22 +80,25 @@
     <!--Firebase Data Operations -->
     <!--Set and Update Data-->
     <div class="container">
-        <br><h2>Set + Update a Visit Date</h2><br>
+        <br><br><h1 class = "planning-section-font">Schedule/Update Your Visit</h1><br>
         <ol class="list-group list-group-numbered notes">
-            <li class="list-group-item border-0"><strong>Set</strong> - will completely overwrite all of the data stored at the node.</li>
-            <li class="list-group-item border-0"><strong>Update</strong> - will only replace the fields that have changed at the node, or add new fields if they aren't present</li>
-            <li class="list-group-item border-0">If you're collecting data from a sensor, you probably want to use update.</li>
+            <li class="list-group-item border-0"><strong>Select a Date for Your Visit:</strong> Use the drop-down menu to pick the year, month, and day of your visit.</li>
+            <li class="list-group-item border-0"><strong>Specify the Number of Visitors:</strong> Enter the number of people in your group to ensure appropriate accommodations.</li>
         </ol><br>
         
         <div class="container dataForm mb-5">
             <form>
                 <select class="form-select mb-3" aria-label="Default select example" id="year">
-                    <option selected>Trial (Year)</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
+                    <option selected>Choose a Year</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
                 </select>
                 <select class="form-select mb-3" aria-label="Default select example" id="month">
-                    <option selected>Month</option>
+                    <option selected>Choose a Month</option>
                     <option value="Jan">Jan</option>
                     <option value="Feb">Feb</option>
                     <option value="Mar">Mar</option>
@@ -110,7 +113,7 @@
                     <option value="Dec">Dec</option>
                 </select>
                 <select class="form-select mb-3" aria-label="Default select example" id="day">
-                    <option selected>Day</option>
+                    <option selected>Choose a Day</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -144,7 +147,7 @@
                     <option value="31">31</option>
                                 
                 </select>
-                <input type="text" class="form-control mb-3" placeholder="Temperature (°F)" id="temperature">
+                <input type="text" class="form-control mb-3" placeholder="Number of Attendees" id="attendees">
                 <button type = "button" id="set" name="set" class="btn btn-outline-primary mb-3 w-100">Set</button>
                 <button type = "button" id="update" name="update" class="btn btn-outline-secondary mb-3 w-100">Update</button>
             </form>       
@@ -153,20 +156,24 @@
 
     <!--Get a single datum -->
     <div class="container border">
-        <br><h2>Registered Visit Dates</h2><br>
+        <br><h1 class = "planning-section-font">Registered Visit Dates</h1><br>
         <ol class="list-group list-group-numbered notes">
-            <li class="list-group-item border-0">Retrieve a single datum from a node and display it in a table.</li>
+            <li class="list-group-item border-0"><strong>View Your Registered Dates:</strong> Access a list of all your registered museum visit dates</li>
         </ol><br>
         
         <div class="container dataForm mb-5">
             <form>
                 <select class="form-select mb-3" aria-label="Default select example" id="getYear">
-                    <option selected>Trial (Year)</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
+                    <option selected>Choose a Year</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
                 </select>
                 <select class="form-select mb-3" aria-label="Default select example" id="getMonth">
-                    <option selected>Month</option>
+                    <option selected>Choose a Month</option>
                     <option value="Jan">Jan</option>
                     <option value="Feb">Feb</option>
                     <option value="Mar">Mar</option>
@@ -181,7 +188,7 @@
                     <option value="Dec">Dec</option>
                 </select>
                 <select class="form-select mb-3" aria-label="Default select example" id="getDay">
-                    <option selected>Day</option>
+                    <option selected>Choose a Day</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -225,7 +232,7 @@
                 <th scope="col">Year</th>
                 <th scope="col">Month</th>
                 <th scope="col">Day</th>
-                <th scope="col">Temperature (°F)</th>
+                <th scope="col"># of Attendees</th>
               </tr>
             </thead>
             <tbody>
@@ -233,7 +240,7 @@
                 <td><p id ="yearVal"></p></td>
                 <td><p id ="monthVal"></td>
                 <td><p id ="dayVal"></td>
-                <td><p id ="tempVal"></p></td>
+                <td><p id ="attendVal"></p></td>
               </tr>
               <tr>
             </tbody>
@@ -242,20 +249,24 @@
 
     <!--Get a data set -->
     <div class="container border">
-        <br><h2>Montly Registered Visits</h2><br>
+        <br><h1 class = "planning-section-font">Montly Registered Visits</h1><br>
         <ol class="list-group list-group-numbered notes">
-            <li class="list-group-item border-0">Retrieve an entire month's set of data and display in a table</li>
+            <li class="list-group-item border-0"><strong>View Monthly Overview:</strong> Access the "Monthly Visits" section to see an overview of all registered visits for the current month.</li>
         </ol><br>
         
         <div class="container dataForm mb-5">
             <form>
                 <select class="form-select mb-3" aria-label="Default select example" id="getSetYear">
-                    <option selected>Trial (Year)</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
+                    <option selected>Choose a Year</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
                 </select>
                 <select class="form-select mb-3" aria-label="Default select example" id="getSetMonth">
-                    <option selected>Month</option>
+                    <option selected>Choose a Month</option>
                     <option value="Jan">Jan</option>
                     <option value="Feb">Feb</option>
                     <option value="Mar">Mar</option>
@@ -284,7 +295,7 @@
                 <thead>
                 <tr>
                     <th scope="col">Day</th>
-                    <th scope="col">Temperature (°F)</th>
+                    <th scope="col"># of Attendees</th>
                 </tr>
                 </thead>
                 <tbody id = "tbody-2">
@@ -297,21 +308,25 @@
 
     <!--Delete Data-->
     <div class="container border">
-        <br><h2>Unregister for Visit</h2><br>
+        <br><h1 class = "planning-section-font">Cancel Your Visit</h1><br>
         <ol class="list-group list-group-numbered notes">
-            <li class="list-group-item border-0">This function will allow you to delete a single day's data</li>
-            <li class="list-group-item border-0">To delete an entire month's data, you need to remove modify the directory path removing the 'day' part.</li>
+            <li class="list-group-item border-0"><strong>Select the Visit:</strong> Select the year, month, and day of your registered visit.</li>
+            <li class="list-group-item border-0"><strong>Confirm the Cancellation:</strong> Cancel your visit and reregister in the Schedule Your Visit above!</li>
         </ol><br>
         
         <div class="container dataForm mb-5">
             <form>
                 <select class="form-select mb-3" aria-label="Default select example" id="delYear">
-                    <option selected>Trial (Year)</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
+                    <option selected>Choose a Year</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
                 </select>
                 <select class="form-select mb-3" aria-label="Default select example" id="delMonth">
-                    <option selected>Month</option>
+                    <option selected>Choose a Month</option>
                     <option value="Jan">Jan</option>
                     <option value="Feb">Feb</option>
                     <option value="Mar">Mar</option>
@@ -326,7 +341,7 @@
                     <option value="Dec">Dec</option>
                 </select>
                 <select class="form-select mb-3" aria-label="Default select example" id="delDay">
-                    <option selected>Day</option>
+                    <option selected>Choose a Day</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
