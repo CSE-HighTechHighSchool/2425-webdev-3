@@ -352,17 +352,6 @@ window.onload = function () {
 }
 
 // Get, Set, Update, Delete Sharkriver Temp. Data in FRD
-// Set (Insert) data function call
-document.getElementById('set').onclick = function () {
-  const year = document.getElementById('year').value
-  const month = document.getElementById('month').value
-  const day = document.getElementById('day').value
-  const attendees = document.getElementById('attendees').value
-  const userID = currentUser.uid;
-
-  setData(userID, year, month, day, attendees);
-}
-
 // Update data function call
 
 document.getElementById('update').onclick = function () {
