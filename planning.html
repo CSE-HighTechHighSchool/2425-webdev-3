@@ -170,7 +170,7 @@
                 <input type="text" class="form-control mb-3" placeholder="Number of Attendees" id="attendees">
                 <!-- Update Button (not set) -->
                 <button type="button" id="update" name="update" class="btn btn-outline-secondary mb-3 w-100">Add
-                    Visit</button> 
+                    Visit</button>
             </form>
         </div>
     </div><br>
@@ -248,6 +248,36 @@
                     Date</button>
             </form>
         </div>
+
+        <!-- Table for displaying selected data -->
+        <table class="table table-info">
+            <thead>
+                <tr>
+                    <th scope="col">Year</th>
+                    <th scope="col">Month</th>
+                    <th scope="col">Day</th>
+                    <th scope="col"># of Attendees</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p id="yearVal"></p>
+                    </td>
+                    <td>
+                        <p id="monthVal">
+                    </td>
+                    <td>
+                        <p id="dayVal">
+                    </td>
+                    <td>
+                        <p id="attendVal"></p>
+                    </td>
+                </tr>
+                <tr>
+            </tbody>
+        </table>
+    </div><br>
     </div>
 
     <!--Get a data set -->
